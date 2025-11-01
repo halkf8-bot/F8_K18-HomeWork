@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Trang chủ</title>
+</head>
+<body>
+<h1>Bài 2: Phân nhóm các thuật toán Machine Learning</h1>
+<p><i>Dec 27, 2016</i></p>
+<p>Có hai cách phổ biến phân nhóm các thuật toán Machine learning. Một là dựa trên phương thức học (learning style), hai là dựa trên chức năng (function) (của mỗi thuật toán).</p>
+<p><b>Trong trang này:</b></p>
+<ol>
+    <li><a href="#phan-nhom">Phân nhóm dựa trên phương thức học</a></li>
+        <ul>
+            <li><a href="#hoc-co-giam-sat">Supervised Learning (Học có giám sát)</a></li>
+                <ul>
+                    <li><a href="#phan-loai">Classification (Phân loại)</a></li>
+                    <li><a href="#hoi-quy">Regression (Hồi quy)</a></li>
+                </ul>
+            <li><a href="#hoc-khong-giam-sat">Unsupervised Learning (Học không giám sát)</a></li>
+                <ul>
+                    <li><a href="#phan-nhom">Clustering (phân nhóm)</a></li>
+                    <li><a href="#association">Association</a></li>
+                </ul>
+            <li><a href="#hoc-ban-giam-sat">Semi-Supervised Learning (Học bán giám sát)</a></li>
+            <li><a href="#hoc-cung-co">Reinforcement Learning (Học Củng Cố)</a></li>
+        </ul>
+    <li>Phân nhóm dựa trên chức năng</li>
+        <ul>
+            <li>Regression Algorithms</li>
+            <li>Classification Algorithms</li>
+            <li>Instance-based Algorithms</li>
+            <li>Regularization Algorithms</li>
+            <li>Bayesian Algorithms</li>
+            <li>Clustering Algorithms</li>
+            <li>Artificial Neural Network Algorithms</li>
+            <li>Dimensionality Reduction Algorithms</li>
+            <li>Ensemble Algorithms</li>
+        </ul>
+    <li>Tài liệu tham khảo</li>
+</ol>
+<h2>1. Phân nhóm dựa trên phương thức học</h2>
+<p id="phan-nhom">Theo phương thức học, các thuật toán Machine Learning thường được chia làm 4 nhóm: Supervised learning, Unsupervised learning, Semi-supervised learning và Reinforcement learning. <i>Có một số cách phân nhóm không có Semi-supervised learning hoặc Reinforcement learning.</i></p>
+<h3 id="hoc-co-giam-sat">Supervised Learning (Học có giám sát)</h3>
+<p>Supervised learning là thuật toán dự đoán đầu ra (outcome) của một dữ liệu mới (new input) dựa trên các cặp (input, outcome) đã biết từ trước. Cặp dữ liệu này còn được gọi là (data, label), tức (dữ liệu, nhãn). Supervised learning là nhóm phổ biến nhất trong các thuật toán Machine Learning.</p>
+<p>y<sub>i</sub>≈f(x<sub>i</sub>),∀i=1,2,…,N</p>
+<p><b>Ví dụ 1</b>: trong nhận dạng chữ viết tay, ta có ảnh của hàng nghìn ví dụ của mỗi chữ số được viết bởi nhiều người khác nhau. Chúng ta đưa các bức ảnh này vào trong một thuật toán và chỉ cho nó biết mỗi bức ảnh tương ứng với chữ số nào. Sau khi thuật toán tạo ra một mô hình, tức một hàm số mà đầu vào là một bức ảnh và đầu ra là một chữ số, khi nhận được một bức ảnh mới mà mô hình <strong>chưa nhìn thấy bao giờ</strong>, nó sẽ dự đoán bức ảnh đó chứa chữ số nào.</p>
+<img src="https://f5b623aa.delivery.rocketcdn.me/wp-content/uploads/2022/09/Open-source-OCR-Datasets.jpg" alt="bộ cơ sở dữ liệu của chữ số viết tay."/>
+<div class="caption">
+<a href="http://yann.lecun.com/exdb/mnist/">MNIST: </a>bộ cơ sở dữ liệu của chữ số viết tay.
+<br>
+(Nguồn: <a href="http://www.rubylab.io/2015/03/18/simple-neural-network-implenentation-in-ruby/">Simple Neural Network implementation in Ruby)</a>
+<p>Ví dụ này khá giống với cách học của con người khi còn nhỏ. Ta đưa bảng chữ cái cho một đứa trẻ và chỉ cho chúng đây là chữ A, đây là chữ B. Sau một vài lần được dạy thì trẻ có thể nhận biết được đâu là chữ A, đâu là chữ B trong một cuốn sách mà chúng chưa nhìn thấy bao giờ.</p>
+<p><b>Ví dụ 2</b>: Thuật toán dò các khuôn mặt trong một bức ảnh đã được phát triển từ rất lâu. Thời gian đầu, facebook sử dụng thuật toán này để chỉ ra các khuôn mặt trong một bức ảnh và yêu cầu người dùng tag friends - tức gán nhãn cho mỗi khuôn mặt. Số lượng cặp dữ liệu (khuôn mặt, tên người) càng lớn, độ chính xác ở những lần tự động tag tiếp theo sẽ càng lớn.</p>
+<p><b>Ví dụ 3</b>: Bản thân thuật toán dò tìm các khuôn mặt trong 1 bức ảnh cũng là một thuật toán Supervised learning với training data (dữ liệu học) là hàng ngàn cặp (ảnh, mặt người) và (ảnh, không phải mặt người) được đưa vào. Chú ý là dữ liệu này chỉ phân biệt mặt người và không phải mặt người mà không phân biệt khuôn mặt của những người khác nhau.</p>
+<p>Thuật toán supervised learning còn được tiếp tục chia nhỏ ra thành hai loại chính:</p>
+<h4 id="phan-loai">Classification (Phân loại)</h4>
+<p>Một bài toán được gọi là <em>classification</em> nếu các <i>label</i> của input data được chia thành một số hữu hạn nhóm. Ví dụ: Gmail xác định xem một email có phải là spam hay không; các hãng tín dụng xác định xem một khách hàng có khả năng thanh toán nợ hay không. Ba ví dụ phía trên được chia vào loại này.</p>
+<h4 id="hoi-quy">Regression (Hồi quy)</h4>
+<p>(tiếng Việt dịch là <em>Hồi quy</em>, tôi không thích cách dịch này vì bản thân không hiểu nó nghĩa là gì)</p>
+<p>Nếu label không được chia thành các nhóm mà là một giá trị thực cụ thể. Ví dụ: một căn nhà rộng xm<sup>2</sup></p>
+<p>Gần đây <a href="http://how-old.net/">Microsoft có một ứng dụng dự đoán giới tính và tuổi dựa trên khuôn mặt</a>. Phần dự đoán giới tính có thể coi là thuật toán <strong>Classification</strong>, phần dự đoán tuổi có thể coi là thuật toán <strong>Regression</strong>. Chú ý rằng phần dự đoán tuổi cũng có thể coi là <strong>Classification</strong> nếu ta coi tuổi là <em>một số nguyên dương không lớn hơn 150, chúng ta sẽ có 150 class (lớp) khác nhau.</em></p>
+<h3 id="hoc-khong-giam-sat">Unsupervised Learning (Học không giám sát)</h3>
+<p>Trong thuật toán này, chúng ta không biết được outcome hay nhãn mà chỉ có dữ liệu đầu vào. Thuật toán unsupervised learning sẽ dựa vào cấu trúc của dữ liệu để thực hiện một công việc nào đó, ví dụ như phân nhóm (clustering) hoặc giảm số chiều của dữ liệu (dimension reduction) để thuận tiện trong việc lưu trữ và tính toán.<br>
+    Một cách toán học, Unsupervised learning là khi chúng ta chỉ có dữ liệu vào<br>
+    Những thuật toán loại này được gọi là Unsupervised learning vì không giống như Supervised learning, chúng ta không biết câu trả lời chính xác cho mỗi dữ liệu đầu vào. Giống như khi ta học, không có thầy cô giáo nào chỉ cho ta biết đó là chữ A hay chữ B. Cụm không giám sát được đặt tên theo nghĩa này.<br>
+    Các bài toán Unsupervised learning được tiếp tục chia nhỏ thành hai loại:</p>
+<h4 id="phan-nhom">Clustering (phân nhóm)</h4>
+<p>Ví dụ: phân nhóm khách hàng dựa trên hành vi mua hàng. Điều này cũng giống như việc ta đưa cho một đứa trẻ rất nhiều mảnh ghép với các hình thù và màu sắc khác nhau</p>
+<h4 id="association">Association</h4>
+<p>Là bài toán khi chúng ta muốn khám phá ra một quy luật dựa trên nhiều dữ liệu cho trước.</p>
+<h3 id="hoc-ban-giam-sat">Semi-Supervised Learning (Học bán giám sát)</h3>
+<p>Các bài toán khi chúng ta có một lượng lớn dữ liệu</p>
+<h3 id="hoc-cung-co">Reinforcement Learning (Học Củng Cố)</h3>
+<p>Reinforcement learning là các bài toán giúp cho một hệ thống tự động xác định hành vi dựa trên hoàn cảnh để đạt được lợi ích cao nhất (maximizing the performance). Hiện tại, Reinforcement learning chủ yếu được áp dụng vào Lý Thuyết Trò Chơi (Game Theory), các thuật toán cần xác định nước đi tiếp theo để đạt được điểm số cao nhất.</p>
+<img src="https://machinelearningcoban.com/assets/categories/alphago.jpeg">
+<div class="caption">
+    AlphaGo chơi cờ vây với Lee Sedol. AlphaGo là một ví dụ của Reinforcement learning.<br>
+    (Nguồn: <a href="https://www.tomshardware.com/news/alphago-defeats-sedol-second-time,31377.html">AlphaGo AI Defeats Sedol Again, With 'Near Perfect Game')</a>
+</div>
+<p><b>Ví dụ 1:</b><a href="#">AlphaGo gần đây nổi tiếng với việc chơi cờ vây thắng cả con người. Cờ vây được xem là có độ phức tạp cực kỳ cao</a>với tổng số nước đi là xấp xỉ<sup>761</sup></p>
+<p><b>Ví dụ 2:</b><a href="#">Huấn luyện cho máy tính chơi game Mario.</a>Đây là một chương trình thú vị dạy máy tính chơi game Mario.</p>
+<iframe width="600" height="400" src="https://www.youtube.com/embed/qv6UVOQ0F44" title="MarI/O - Machine Learning for Video Games" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div class="caption">
+    Huấn luyện cho máy tính chơi game Mario
+</div>
+</body>
+</html>
