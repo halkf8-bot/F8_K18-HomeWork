@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Trung tâm cấu hình giao diện (Demo)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Montserrat", sans-serif;
+            color: #111827;
+            background-color: #f3f4f6;
+            font-size: 15px;
+        }
+        h1 {
+            color: #f9fafb;
+            background-color: #f98000;
+        }
+        #light:checked + label {
+            color: #8b5e00;
+            background-color: #fff8cc;
+        }
+        #dark:checked + label {
+            color: #f9fafb;
+            background-color: #111827;
+        }
+        #red:checked + label {
+            color: #991b1b;
+            background-color: #fee2e2;
+        }
+        #blue:checked + label {
+            color: #1d4ed8;
+            background-color: #dbeafe;
+        }
+        #green:checked + label {
+            color: #166534;
+            background-color: #dcfce7;
+        }
+        #vi:checked + label{
+            color: #166534;
+            background-color: #bbf7d0;
+        }
+        #en:checked + label {
+            color: #1d4ed8;
+            background-color: #bfdbfe;
+        }
+        #advanced:checked + label {
+            color: #92400e;
+            background-color: #fef3c7;
+        }
+        #eco:checked + label {
+            color: #15803d;
+            background-color: #bbf7d0;
+        }
+        #warning:checked + label {
+            color: #b91c1c;
+            background-color: #fee2e2;
+        }
+
+        #warning ~ h2 {
+            color: #9ca3af;
+            background-color: #ffffff;
+        }
+        #light:checked ~ .light {
+            color: #111827;
+            background-color: #fff8cc;
+        }
+        #dark:checked ~ .dark {
+            color: #f9fafb;
+            background-color: #111827;
+        }
+        #red:checked ~ .red {
+            color: #7f1d1d;
+            background-color: #fee2e2;
+        }
+        #blue:checked ~ .blue {
+            color: #1d4ed8;
+            background-color: #dbeafe;
+        }
+        #green:checked ~ .green {
+            color: #166534;
+            background-color: #dcfce7;
+        }
+        #vi:checked ~ .vi {
+            color: #166534;
+        }
+        #en:checked ~ .en {
+            color: #1d4ed8;
+        }
+        #advanced:checked ~ .advanced {
+            color: #92400e;
+            background-color: #fef3c7;
+        }
+        #eco:checked ~ .eco {
+            color: #166534;
+            background-color: #bbf7d0;
+        }
+        #warning:checked ~ .warning {
+            color: #b91c1c;
+            background-color: #fee2e2;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Trung tâm cấu hình giao diện (Demo)</h1>
+<h2>Chọn giao diện (Theme):</h2>
+<input type="radio" name="theme" value="Light" id="light" checked>
+<label for="light">Light</label>
+<input type="radio" name="theme" value="Dark" id="dark">
+<label for="dark">Dark</label>
+<h2>Chọn màu chủ đạo (Color):</h2>
+<input type="radio" name="color" value="red" id="red" checked>
+<label for="red">Red</label>
+<input type="radio" name="color" value="blue" id="blue">
+<label for="blue">Blue</label>
+<input type="radio" name="color" value="green" id="green">
+<label for="green">Green</label>
+<h2>Chọn ngôn ngữ (Language):</h2>
+<input type="radio" name="language" value="vi" id="vi">
+<label for="vi">VI</label>
+<input type="radio" name="language" value="en" id="en">
+<label for="en">EN</label>
+<h2>Tùy chọn bổ sung (Options - Checkbox):</h2>
+<input type="checkbox" name="options" value="advanced" id="advanced">
+<label for="advanced">Hiển thị mô tả nâng cao</label>
+<input type="checkbox" name="options" value="eco" id="eco">
+<label for="eco">Bật chế độ Eco</label>
+<input type="checkbox" name="options" value="warning" id="warning">
+<label for="warning">Hiển thị cảnh báo quan trọng</label>
+
+<h2 class="light">Theme Light: Giao diện sáng, chữ đen.</h2>
+<h2 class="dark">Theme Dark: Giao diện tối, chữ sáng.</h2>
+<h2 class="red">Màu Red: Được nhấn mạnh khi chọn Red.</h2>
+<h2 class="blue">Màu Blue: Được nhấn mạnh khi chọn Blue.</h2>
+<h2 class="green">Màu Green: Được nhấn mạnh khi chọn Green.</h2>
+<h2 class="vi">[VI] Xin chào bạn! Khi chọn VI, dòng này rõ hơn.</h2>
+<h2 class="en">[EN] Hello, world! Khi chọn EN, dòng này rõ hơn.</h2>
+<h2 class="advanced">Mô tả nâng cao: giải thích kỹ hơn về cách các lựa chọn đang ảnh hưởng giao diện.</h2>
+<h2 class="eco">Chế độ Eco: mô tả trạng thái tiết kiệm tài nguyên cho giao diện.</h2>
+<h2 class="warning">Cảnh báo quan trọng: khu vực dùng để nhấn mạnh thông tin hệ thống.</h2>
+
+</body>
+</html>
