@@ -4,13 +4,13 @@
     box-sizing: border-box;
 }
 
-body {
+body{
     background-image: url(https://images.unsplash.com/photo-1579547621706-1a9c79d5c9f1?q=80&w=2070&auto=format&fit=crop);
     font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
-    background: rgba(255, 255, 255, 0.30);
+    background: rgba(255, 255, 255, 0.20);
     margin: 2rem;
     border-radius: 1rem;
 }
@@ -95,7 +95,7 @@ label {
     padding: 2rem;
     border-radius: 1rem;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .title-advice {
@@ -119,6 +119,7 @@ label {
 }
 
 .benefits{
+    padding: 4rem;
     text-align: center;
     margin-top: 5rem;
 }
@@ -135,16 +136,14 @@ label {
     height: 1.2rem;
 }
 
-hr {
-    border: 0.1rem solid rgba(192, 132, 252, 0.6);
-    margin-top: 6rem;
-}
+
 
 footer {
     padding-top: 4rem;
     padding-bottom: 1rem;
     text-align: center;
-    background-color: #faefef;
+    background-color: #ffffff;
     margin-top: 3rem;
     margin-bottom: 0;
+    border-top: 0.1rem solid purple;
 }
