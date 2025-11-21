@@ -51,8 +51,7 @@ a{
     margin-top:4rem;
     border-radius:7rem;
     border: 0.2rem solid rgba(192, 132, 252, 0.6);
-    width: 4rem;
-}
+    width: 4rem;}
 
 .text-logo{
     margin-top:1rem;
@@ -64,9 +63,6 @@ a{
 .text2500{
     font-weight:700;
 }
-
-.avatar{
-    border:0.2rem solid rgba(192, 132, 252, 0.6);}
 
 #turnoncolor{
     margin-top:3rem;}
