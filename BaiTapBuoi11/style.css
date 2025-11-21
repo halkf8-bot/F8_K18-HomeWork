@@ -1,149 +1,104 @@
-* {
+*{
     margin:0;
     padding:0;
-    box-sizing: border-box;
-}
-box{
-    text-align: center;
-}
+    box-sizing:border-box;}
 
+html{font-size:62.5%}
 
-body{
-    background-image: url(https://images.unsplash.com/photo-1579547621706-1a9c79d5c9f1?q=80&w=2070&auto=format&fit=crop);
+.box{
     font-family: Arial, Helvetica, sans-serif;
-}
+    background-image:url(https://images.unsplash.com/photo-1579547621706-1a9c79d5c9f1?q=80&w=2070&auto=format&fit=crop);
+    text-align:center;}
 
 header {
-    background: rgba(255, 255, 255, 0.20);
-    margin: 2rem;
-    border-radius: 1rem;
-}
+    background-color: rgba(255, 255, 255, 0.20);
+    border-radius: 5rem;
 
-h1 {
-    text-align: center;
-    margin: 0.625rem 3.125rem;
-    font-size: 4rem;
-    color: #1e293b;
-    font-weight: 700;
-    padding-top: 4rem;
-}
+    h1{
+        font-weight:700;
+        font-size:6.4rem;
+        color:#1e293b;}
 
-.heading {
-    color: #c084fc;
-    font-weight: 700;
-}
+    .heading{
+        font-weight:700;
+        color:#c084fc;
+        font-size:6.4rem;}
 
-.title-heading {
-    font-size: 1.25rem;
-    text-align: center;
-    padding-top: 1rem;
-    color: #334155;
-    font-weight: 400;
-}
+    .content-heading{
+        margin-top:1rem;
+        margin-bottom:4rem;
+        color:#334155;
+        font-weight:400;
+        font-size:2rem;}
 
-.btn-heading {
-    padding: 1rem 2rem;
-    font-size: 1.125rem;
-    font-weight: 600;
-    border-radius: 2rem;
-    background-color: #a855f7;
-    color: #fff;
-    border-color: transparent;
-    margin-top: 5rem;
-}
+    a{
+        font-size:1.8rem;}
 
-.btn-heading:hover {
-    background-color: #9333ea;
-}
+    .button{
+        padding: 1rem 3rem;
+        color:white;
+        border-radius:2rem;
+        font-weight:600;
+        background-color:#a855f7;
+        text-decoration: none;
+    }
 
-.logo {
-    border-radius: 10rem;
-    border: 0.25rem solid rgba(192, 132, 252, 0.6);
-    width: 3rem;
-    height: 3rem;
-    margin-left: 54rem;
-    margin-top: 5rem;
-}
+    .button:hover{
+        background-color:#9333ea;
+    }
 
-.title-logo {
-    font-size: 1.25rem;
-    text-align: center;
-    padding-top: 1rem;
-    color: #334155;
-    font-weight: 600;
-}
+    .logo{
+        margin-top:4rem;
+        border-radius:7rem;
+        border: 0.2rem solid rgba(192, 132, 252, 0.6);
+        width: 4rem;
+    }
 
-.text2500 {
-    color: #a855f7;
-}
+    .text-logo{
+        margin-top:1rem;
+        font-weight:600;
+        color:#334155;
+        font-size:2rem;
+    }
 
-#turnoncolor {
-    font-size: 1.125rem;
-    font-weight: 600;
-}
+    .text2500{
+        font-weight:700;
+    }
 
-input {
-    margin-left: 50rem;
-    margin-top: 2rem;
-}
+    .avatar{
+        border:0.2rem solid rgba(192, 132, 252, 0.6);}
 
-label {
-    padding-left: 0.625rem;
-    color: #334155;
-}
+    #turnoncolor{
+        margin-top:3rem;
+    }
 
-.advice {
-    margin: 2rem;
-    padding: 2rem;
-    border-radius: 1rem;
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.2);
-}
+    #turnoncolor:checked ~ .advice{
+        background-color:rgba(192, 132, 252, 0.35);}
 
-.title-advice {
-    font-size: 1.375rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: #334155;
-}
+    .advice{
+        margin: 2rem;
+        padding: 2rem;
+        border-radius: 1rem;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.2);
 
-.content-advice {
-    color: #334155;
-    line-height: 2rem;
-}
+        .title-advice{
+            font-weight:700;
+            font-size:2.2rem;}
 
-#turnoncolor:checked ~ .advice{
-    background-color: rgba(192, 132, 252, 0.35);
-}
+        .content-advice{
+            font-weight:400;
+            font-size:1.8rem;}
 
-#turnoncolor:checked ~ .advice .title-advice, #turnoncolor:checked ~ .advice .content-advice {
-    color: #6b21a8;
-}
+        .icon{
+            width: 1.8rem;
+            height: 1.8rem;}
 
-.benefits{
-    padding: 4rem;
-    text-align: center;
-    margin-top: 5rem;
-}
+        .text-benefits{
+            padding-right:2rem;
+            color: #334155;
+            font-weight:600;
+            font-size:1.6rem;}
 
-.benefits span{
-    padding-right: 2rem;
-    color: #334155;
-    font-weight: 400;
-    font-size: 1rem;
-}
-
-.benefits img {
-    width: 1.2rem;
-    height: 1.2rem;
-}
-
-footer {
-    padding-top: 4rem;
-    padding-bottom: 1rem;
-    text-align: center;
-    background-color: #ffffff;
-    margin-top: 3rem;
-    margin-bottom: 0;
-    border-top: 0.1rem solid purple;
-}
+        footer{
+            font-size:1.6rem;}
