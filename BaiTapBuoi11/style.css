@@ -14,91 +14,90 @@ header {
     background-color: rgba(255, 255, 255, 0.20);
     border-radius: 5rem;
 
-    h1{
-        font-weight:700;
-        font-size:6.4rem;
-        color:#1e293b;}
+h1{
+    font-weight:700;
+    font-size:6.4rem;
+    color:#1e293b;}
 
-    .heading{
-        font-weight:700;
-        color:#c084fc;
-        font-size:6.4rem;}
+.heading{
+    font-weight:700;
+    color:#c084fc;
+    font-size:6.4rem;}
 
-    .content-heading{
-        margin-top:1rem;
-        margin-bottom:4rem;
-        color:#334155;
-        font-weight:400;
-        font-size:2rem;}
+.content-heading{
+    margin-top:1rem;
+    margin-bottom:4rem;
+    color:#334155;
+    font-weight:400;
+    font-size:2rem;}
 
-    a{
-        font-size:1.8rem;}
+a{
+    font-size:1.8rem;}
 
-    .button{
-        padding: 1rem 3rem;
-        color:white;
-        border-radius:2rem;
-        font-weight:600;
-        background-color:#a855f7;
-        text-decoration: none;
-    }
+.button{
+    padding: 1rem 3rem;
+    color:white;
+    border-radius:2rem;
+    font-weight:600;
+    background-color:#a855f7;
+    text-decoration: none;
+}
 
-    .button:hover{
-        background-color:#9333ea;
-    }
+.button:hover{
+    background-color:#9333ea;
+}
 
-    .logo{
-        margin-top:4rem;
-        border-radius:7rem;
-        border: 0.2rem solid rgba(192, 132, 252, 0.6);
-        width: 4rem;
-    }
+.logo{
+    margin-top:4rem;
+    border-radius:7rem;
+    border: 0.2rem solid rgba(192, 132, 252, 0.6);
+    width: 4rem;
+}
 
-    .text-logo{
-        margin-top:1rem;
-        font-weight:600;
-        color:#334155;
-        font-size:2rem;
-    }
+.text-logo{
+    margin-top:1rem;
+    font-weight:600;
+    color:#334155;
+    font-size:2rem;
+}
 
-    .text2500{
-        font-weight:700;
-    }
+.text2500{
+    font-weight:700;
+}
 
-    .avatar{
-        border:0.2rem solid rgba(192, 132, 252, 0.6);}
+.avatar{
+    border:0.2rem solid rgba(192, 132, 252, 0.6);}
 
-    #turnoncolor{
-        margin-top:3rem;
-    }
+#turnoncolor{
+    margin-top:3rem;}
 
-    #turnoncolor:checked ~ .advice{
-        background-color:rgba(192, 132, 252, 0.35);}
+#turnoncolor:checked ~ .advice{
+    background-color:rgba(192, 132, 252, 0.35);}
 
-    .advice{
-        margin: 2rem;
-        padding: 2rem;
-        border-radius: 1rem;
-        text-align: center;
-        background-color: rgba(255, 255, 255, 0.2);
+.advice{
+    margin: 2rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2);
 
-        .title-advice{
-            font-weight:700;
-            font-size:2.2rem;}
+.title-advice{
+    font-weight:700;
+    font-size:2.2rem;}
 
-        .content-advice{
-            font-weight:400;
-            font-size:1.8rem;}
+.content-advice{
+    font-weight:400;
+    font-size:1.8rem;}
 
-        .icon{
-            width: 1.8rem;
-            height: 1.8rem;}
+.icon{
+    width: 1rem;
+    height: 1rem;}
 
-        .text-benefits{
-            padding-right:2rem;
-            color: #334155;
-            font-weight:600;
-            font-size:1.6rem;}
+.text-benefits{
+    padding-right:2rem;
+    color: #334155;
+    font-weight:600;
+    font-size:1.6rem;}
 
-        footer{
-            font-size:1.6rem;}
+footer{
+    font-size:1.6rem;}
