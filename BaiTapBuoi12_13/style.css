@@ -115,3 +115,50 @@ footer{
     margin-top:5rem;
     text-align:center;
     font-size:1.6rem;}
+
+.dialog{
+    position: fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    z-index:10;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    visibility:hidden;
+    opacity:0;}
+
+.overlay-close{
+    position:absolute;
+    width:200rem;
+    height:200rem;
+    background-color:rgba(0, 0, 0, 0.5);
+    cursor:default;}
+
+.dialog:target {
+    visibility: visible;
+    opacity:1;}
+
+.dialog-body{
+    width:50rem;
+    height:18rem;
+    position:relative;
+    padding:1rem;
+    background-color:#ffffff;
+    border-radius:1rem;}
+
+.btn-close{
+    position:absolute;
+    top:0rem;
+    right:0rem;
+    text-decoration:none;
+    color:#333}
+
+.benefits-2{
+    position: static;}
+
+.bnf-text{
+    display:inline;
+    margin:3rem;
+    color:#334155;}
