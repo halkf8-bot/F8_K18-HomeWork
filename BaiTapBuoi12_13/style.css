@@ -21,6 +21,10 @@ h1{
     font-size:6.4rem;
     color:#1e293b;}
 
+h2{
+    font-weight:400;
+    font-size:2.8rem;}
+
 .heading{
     font-weight:700;
     color:#c084fc;
@@ -32,6 +36,12 @@ h1{
     color:#334155;
     font-weight:400;
     font-size:2rem;}
+
+.content-dialog{
+    margin-bottom:1rem;
+    color: #677388;
+    font-weight:400;
+    font-size:1.5rem;}
 
 a{
     margin: 1rem;
@@ -54,6 +64,19 @@ a{
     border-radius: 2rem;
     font-weight: 600;
     background-color: orange;
+    text-decoration: none;}
+
+.btn-batdaungay{
+    display: block;
+    padding: 1rem 3rem;
+    color: white;
+    border-radius: 1rem;
+    font-weight: 600;
+    background-color:#a855f7;
+    text-decoration: none;}
+
+.btn-dacotaikhoan, .btn-muonnangcao{
+    color: #c084fc;
     text-decoration: none;}
 
 .avatar{
@@ -141,24 +164,29 @@ footer{
     opacity:1;}
 
 .dialog-body{
+    line-height:2.2;
     width:50rem;
-    height:18rem;
+    height:40rem;
     position:relative;
     padding:1rem;
     background-color:#ffffff;
-    border-radius:1rem;}
+    border-radius:2rem;}
 
 .btn-close{
+    font-size:2rem;
+    font-weight:bold;
     position:absolute;
-    top:0rem;
-    right:0rem;
+    top:1rem;
+    right:1rem;
     text-decoration:none;
     color:#333}
 
 .benefits-2{
+    text-align: left;
     position: static;}
 
 .bnf-text{
+    font-size:1.5rem;
     display:inline;
     margin:3rem;
     color:#334155;}
