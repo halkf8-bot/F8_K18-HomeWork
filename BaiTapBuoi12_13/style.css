@@ -9,7 +9,7 @@ html{font-size:62.5%;}
     font-family: Arial, Helvetica, sans-serif;
     background-image:url(https://images.unsplash.com/photo-1579547621706-1a9c79d5c9f1?q=80&w=2070&auto=format&fit=crop);
     text-align: center;
-    padding: 1rem 1rem;}
+    padding: 3rem 1rem 0.5rem;}
 
 header{
     background-color: rgba(255, 255, 255, 0.25);
@@ -20,10 +20,6 @@ h1{
     font-weight:700;
     font-size:6.4rem;
     color:#1e293b;}
-
-h2{
-    font-weight:400;
-    font-size:2.8rem;}
 
 .heading{
     font-weight:700;
@@ -36,12 +32,6 @@ h2{
     color:#334155;
     font-weight:400;
     font-size:2rem;}
-
-.content-dialog{
-    margin-bottom:1rem;
-    color: #677388;
-    font-weight:400;
-    font-size:1.5rem;}
 
 a{
     margin: 1rem;
@@ -63,21 +53,11 @@ a{
     color: white;
     border-radius: 2rem;
     font-weight: 600;
-    background-color: orange;
+    background-color: #f05123;
     text-decoration: none;}
 
-.btn-batdaungay{
-    display: block;
-    padding: 1rem 3rem;
-    color: white;
-    border-radius: 1rem;
-    font-weight: 600;
-    background-color:#a855f7;
-    text-decoration: none;}
-
-.btn-dacotaikhoan, .btn-muonnangcao{
-    color: #c084fc;
-    text-decoration: none;}
+.button-cta:hover{
+    background-color:#d8431c;}
 
 .avatar{
     margin-top:4rem;
@@ -97,15 +77,24 @@ a{
     font-weight:700;}
 
 #turnoncolor{
-    margin-top:3rem;}
+    margin-right:1rem;
+    margin-top:2rem;}
+
+input{
+    background-color: #f8fafc;}
+
+label{
+    font-size:1.6rem;}
 
 #turnoncolor:checked ~ .advice{
+    color: #6b21a8;
     background-color:rgba(192, 132, 252, 0.35);}
 
 .advice{
+    line-height:4rem;
     margin: 2rem;
     padding: 2rem;
-    border-radius: 1rem;
+    border-radius: 2rem;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.4);}
 
@@ -122,6 +111,7 @@ a{
     padding-bottom:7rem;}
 
 .icon{
+    margin-right:1rem;
     width: 2rem;
     height: 2rem;}
 
@@ -135,7 +125,7 @@ footer{
     background-color:rgba(255, 255, 255, 0.35);
     padding-top:5rem;
     border-top: 0.1rem solid rgba(192, 132, 252, 0.6);
-    margin-top:5rem;
+    margin-top:3rem;
     text-align:center;
     font-size:1.6rem;}
 
@@ -164,13 +154,17 @@ footer{
     opacity:1;}
 
 .dialog-body{
-    line-height:2.2;
     width:50rem;
     height:40rem;
     position:relative;
-    padding:1rem;
     background-color:#ffffff;
     border-radius:2rem;}
+
+.content-dialog{
+    margin-top:1rem;
+    color: #677388;
+    font-weight:400;
+    font-size:1.5rem;}
 
 .btn-close{
     font-size:2rem;
@@ -181,12 +175,34 @@ footer{
     text-decoration:none;
     color:#333}
 
+h2{
+    margin-top:2rem;
+    font-weight:400;
+    font-size:2.8rem;}
+
 .benefits-2{
-    text-align: left;
-    position: static;}
+    text-align: left;}
 
 .bnf-text{
     font-size:1.5rem;
-    display:inline;
-    margin:3rem;
+    display:block;
+    margin:2rem;
     color:#334155;}
+
+.btn-batdaungay{
+    display: block;
+    padding: 2rem 2rem;
+    color: white;
+    border-radius: 1rem;
+    font-weight: 600;
+    background-color:#a855f7;
+    text-decoration: none;
+    margin: 3rem 3rem 1rem;}
+
+.btn-dacotaikhoan, .btn-muonnangcao{
+    display: inline-block;
+    color: #c084fc;
+    text-decoration: none;}
+
+.btn-dacotaikhoan:hover, .btn-muonnangcao:hover{
+    text-decoration: underline;}
