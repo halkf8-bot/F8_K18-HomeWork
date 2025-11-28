@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Học lập trình tại F8</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -29,7 +29,81 @@
                         <a href="#" class="btn-muonnangcao">Muốn nâng cao?</a>
                     </div>
                 </div>
-            <a href="#" class="button-cta">Tư vấn ngay</a>
+            <a href="#my-modal" class="button-cta">Tư vấn ngay</a>
+                <div class="modal overlay" id="my-modal">
+                    <a href="#" class="overlay-close"></a>
+                    <div class="modal-body">
+                        <a class="btn-close" href="#">&times;</a>
+                        <h2><strong>Đăng ký tư vấn</strong></h2>
+                        <p class="content-modal">Điền thông tin để được tư vấn lộ trình học phù hợp</p>
+                        <div class="text-field">
+                            <label><b>Họ và tên</b> <span style="color:#ef4444">*</span></label>
+                            <input type="text" placeholder="Nguyễn Văn A">
+                            <div class="info-msg">
+                                <div class="msg-box">Nhập họ và tên đầy đủ của bạn</div>
+                                <div class="triangle"></div>
+                            </div>
+                        </div>
+                        <div class="text-field">
+                            <label><b>Số điện thoại</b> <span style="color:#ef4444">*</span></label>
+                            <input type="text" placeholder="0945409545">
+                            <div class="info-msg">
+                                <div class="msg-box">Số điện thoại để chúng tôi liên hệ tư vấn</div>
+                                <div class="triangle"></div>
+                            </div>
+                        </div>
+                        <div class="text-field">
+                            <label><b>Email</b></label>
+                            <input type="text" placeholder="example@gmail.com">
+                            <div class="info-msg">
+                                <div class="msg-box">Email nhận thông tin khóa học (không bắt buộc)</div>
+                                <div class="triangle"></div>
+                            </div>
+                        </div>
+                        <label><b>Khóa học quan tâm</b> <span style="color:#ef4444">*</span></label>
+                        <div class="options-khqt">
+                            <input id="html-css" type="checkbox" name="option" value="HTML&CSS">
+                            <label for="html-css">HTML & CSS</label>
+                            <div class="info-msg">
+                                <div class="msg-box">Khóa nền tảng xây dựng giao diện web</div>
+                                <div class="triangle"></div>
+                            </div>
+                        </div>
+                        <div class="options-khqt">
+                            <input id="javascript" type="checkbox" name="option" value="JavaScript">
+                            <label for="javascript">JavaScript</label>
+                            <div class="info-msg">
+                                <div class="msg-box">Ngôn ngữ lập trình cho web động</div>
+                                <div class="triangle"></div>
+                            </div>
+                        </div>
+                        <div class="options-khqt">
+                            <input id="frontend" type="checkbox" name="option" value="Front-end lộ trình">
+                            <label for="frontend">Frontend lộ trình</label>
+                            <div class="info-msg">
+                                <div class="msg-box">Lộ trình hoàn chỉnh trở thành Front-end Developer</div>
+                                <div class="triangle"></div>
+                            </div>
+                        </div>
+                        <div class="options-khqt">
+                            <input id="reactjs" type="checkbox" name="option" value="ReactJS">
+                            <label for="reactjs">ReactJS</label>
+                            <div class="info-msg">
+                                <div class="msg-box">Thư viện JavaScript phổ biến nhất hiện nay</div>
+                                <div class="triangle"></div>
+                            </div>
+                        </div>
+                        <div class="options-khqt">
+                            <input id="chuaro" type="checkbox" name="option" value="Chưa rõ - cần tư vấn">
+                            <label for="chuaro">Chưa rõ - cần tư vấn</label>
+                            <div class="info-msg">
+                                <div class="msg-box">Chúng tôi sẽ tư vấn lộ trình phù hợp với bạn</div>
+                                <div class="triangle"></div>
+                            </div>
+                        </div>
+                        <button>ĐĂNG KÝ TƯ VẤN NGAY</button>
+                    </div>
+                </div>
             <div>
                 <img src="https://files.fullstack.edu.vn/f8-prod/public-images/67c022029788c.png" alt="logo" class="avatar">
             </div>
