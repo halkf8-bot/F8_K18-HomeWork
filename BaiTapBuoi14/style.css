@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+ul {
+    list-style: none; /* Bỏ dấu chấm tròn danh sách */
+}
+a {
+    text-decoration: none; /* Bỏ gạch chân mặc định */
+    display: block; /* Để thẻ a chiếm hết không gian li */
+}
+/* --- HEADER --- */
+.header {
+    position: relative; /* Làm mốc tọa độ cho logo */
+    height: 6rem;
+    background-color: #ffffff;
+    border-bottom: 1px solid #dddddd;
+}
+/* --- LOGO --- */
+.logo-box {
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+    width: 4rem;
+    height: 4rem;
+}
+.logo-box img {
+    width: 100%;
+    display: block;
+    border-radius: 1rem;
+}
+/* --- MENU CẤP 1 (NGANG) --- */
+.main-nav {
+    margin-left: 8rem; /* Đẩy menu sang phải, tránh đè lên logo */
+}
+.main-nav > li {
+    display: inline-block; /* Xếp hàng ngang thay vì float/flex */
+    position: relative; /* Làm mốc cho dropdown con */
+}
+/* Style cho link cấp 1 */
+.main-nav > li > a {
+    font-size: 1.6rem;
+    color: #333333;
+    line-height: 6rem; /* Căn giữa theo chiều dọc */
+    padding: 0 2rem;
+    font-weight: bold;
+}
+/* --- MENU CẤP 2 (DROPDOWN DỌC) --- */
+.sub-menu-1 {
+    display: none; /* Ẩn mặc định */
+    position: absolute;
+    top: 100%; /* Nằm ngay dưới menu cha */
+    left: 0;
+    min-width: 20rem;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+    z-index: 100;
+}
+.sub-menu-1 li {
+    position: relative; /* Làm mốc cho menu cấp 3 */
+    border-bottom: 1px solid #f0f0f0;
+}
+/* Style cho link cấp 2 */
+.sub-menu-1 > li > a {
+    font-size: 1.4rem;
+    color: #333333;
+    padding: 1rem 2rem;
+    line-height: 1.4;
+}
+/* --- MENU CẤP 3 (DROPDOWN NGANG) --- */
+.sub-menu-2 {
+    display: none; /* Ẩn mặc định */
+    position: absolute;
+    top: 0; /* Ngang hàng với menu cha */
+    left: 100%; /* Đẩy sang bên phải menu cha */
+    min-width: 18rem;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+}
+.sub-menu-2 > li > a {
+    font-size: 1.4rem;
+    color: #333333;
+    padding: 1rem 2rem;
+    line-height: 1.4;
+    border-bottom: 1px solid #f0f0f0;
+}
+/* --- HIỆU ỨNG HOVER (HIỆN MENU) --- */
+/* Hover cấp 1 hiện cấp 2 */
+.main-nav > li:hover > .sub-menu-1 {
+    display: block;
+}
+/* Hover cấp 2 hiện cấp 3 */
+.sub-menu-1 > li:hover > .sub-menu-2 {
+    display: block;
+}
+/* --- MÀU SẮC & TRẠNG THÁI ACTIVE --- */
+/* 1. Màu chữ khi hover trực tiếp vào link */
+.main-nav a:hover {
+    color: #d62828;
+    text-decoration: underline;
+}
+/* 2. Màu nền khi hover vào mục dropdown (cấp 2, 3) */
+.sub-menu-1 li:hover > a {
+    background-color: #f5f5f5;
+    color: #d62828;
+}
+/* 3. Giữ trạng thái Active cho cha khi đang hover con */
+/* Khi hover vào li cha, thẻ a trực tiếp của nó sẽ đổi màu */
+.main-nav > li:hover > a {
+    color: #d62828;
+    text-decoration: underline;
+}
+.sub-menu-1 > li:hover > a {
+    color: #d62828;
+    background-color: #f5f5f5;
+}
+/* --- ICON MŨI TÊN (CSS Pseudo-elements) --- */
+/* Mũi tên xuống cho cấp 1 có submenu */
+.main-sub-1 > a::after {
+    content: " \25BE"; /* Unicode mũi tên xuống */
+    font-size: 1.2rem;
+    color: #555555;
+    margin-left: 0.5rem;
+}
+/* Mũi tên phải cho cấp 2 có submenu */
+.main-sub-2 > a::after {
+    content: "\25B8"; /* Unicode mũi tên phải */
+    font-size: 1.2rem;
+    color: #555555;
+    position: absolute;
+    right: 1.5rem; /* Neo sang phải */
+}
+/* Đổi màu icon khi hover */
+.main-nav li:hover > a::after {
+    color: #d62828;
+}
