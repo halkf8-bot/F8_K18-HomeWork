@@ -1,0 +1,36 @@
+*{margin:0; padding:0; box-sizing:border-box;}
+html{font-size:62.5%;}
+body{font-family:"Be Vietnam Pro", sans-serif; background:#F7F7F8; font-size:1.6rem;}
+/* HEADER */
+header{max-width:186rem; height:15.4rem; margin: 2rem 4rem 10rem;}
+.header-top{font-size:1.8rem; background-color:#FF9500; color:white; display:flex; align-items:center; justify-content:center; height:5.5rem; border-radius:0.8rem;}
+.header-top img{margin-left:1rem;}
+.header-body{border-bottom:#F1F1F3 solid 0.2rem; align-items:center; padding:2rem; display:flex;}
+.main-content{max-width:calc(100% - 4.8rem); width:159.6rem; margin-left:auto; margin-right:auto;}
+.header-body nav{margin-left:5rem;}
+.header-body .btn{margin-left:auto;}
+.nav a{background-color:#F1F1F3; border-radius:1rem; border:#F1F1F3 solid 0.2rem; color: black; padding: 1.4rem 2.4rem; text-decoration: none;}
+.nav a:nth-last-child(-n+4){background:transparent; border-color:transparent;}
+.btn-signup{text-decoration:none; color:black; padding: 1rem 2rem; border-radius:1rem; border:transparent solid 0.2rem;}
+.btn-login{text-decoration:none; background-color:#FF9500; color:white; padding: 1rem 2rem; border-radius:1rem; border:transparent solid 0.2rem;}
+/* HERO */
+.hero-title{position:relative; border-radius:1rem; margin:0 51rem 2rem; padding:1.5rem; border:0.1rem solid transparent; display:flex; justify-content:center; background-color:white;}
+.thunderlogo{padding:0.5rem; border:0.1rem solid transparent; border-radius:0.6rem; width:4rem; background-color:#FFF4E5;}
+.line{width:4rem; height:4rem; position:absolute; top:-3rem; left:-3rem;}
+h1{color:#1A1A1A; margin-left:1rem; font-weight:600;}
+.hero-text{margin:0 0 2rem; font-size:2.6rem; text-align:center; font-weight:500;}
+.hero-text small{font-size:1.3rem; color:#262626; font-weight:400;}
+.btn-hero{display:flex; justify-content:center; gap:0.5rem; margin:4rem 0 5rem;}
+.btn-ex{text-decoration:none; background-color:#FF9500; color:white; padding: 1rem 2rem; border-radius:1rem; border:transparent solid 0.2rem;}
+.btn-view{background-color:#FFFFFF; text-decoration:none; color:black; padding: 1rem 2rem; border-radius:1rem; border:transparent solid 0.2rem;}
+.partner-logo{border-radius:1.2rem; background-color:#FCFCFD; padding:3rem; border:0.1rem solid transparent; display:flex; align-items:stretch; justify-content:center; margin:10rem 0 10rem;}
+.logobox{background-color:#FCFCFD; width:20rem; height:10rem; padding:3rem 4rem; border-right:0.1rem solid #F1F1F3;}
+img.logobox:last-child{border-right:none;}
+.main-img{margin-bottom:10rem;}
+/* BENEFITS */
+.benefits-top h2{display:flex; align-items:start; line-height:5rem;}
+.btn-view{font-weight:500; background-color:#FFFFFF; text-decoration:none; color:black; padding: 1rem 1rem; border-radius:1rem; border:transparent solid 0.2rem;}
+.benefits-toppp{display:flex; justify-content: space-between; margin-bottom:5rem;}
+.benefits-bot-01, .benefits-bot-02{border:0.2rem solid blue; display:flex; align-items:stretch; justify-content: space-around;}
+.bene{width:50rem; height:30rem; border:0.1rem solid red;}
+.benefits-bot-01 img {width:3.4rem; height:3.4rem}
