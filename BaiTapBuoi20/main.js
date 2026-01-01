@@ -36,26 +36,26 @@ console.log(student)
 
 
 Phần 4 Ép kiểu type casting
-Chuyển đổi "1000" (string) -> number
-let bai1 = "1000";
-let ketQua1 = Number(bai1); // Dùng hàm Number() để ép kiểu
-console.log("--- Bài 1 ---");
-console.log("Giá trị:", ketQua1);
-console.log("Kiểu dữ liệu:", typeof ketQua1);
+Convert string "1000" -> number
+let numStr = "1000";
+let convertedNum = Number(numStr);
+console.log("--- Exercise 1 ---");
+console.log("Value:", convertedNum);
+console.log("Data Type:", typeof convertedNum;
 
-Chuyển đổi 1000 (number) -> string
-let bai2 = 1000;
-let ketQua2 = String(bai2); // Dùng hàm String() để ép kiểu
-console.log("\n--- Bài 2 ---");
-console.log("Giá trị:", ketQua2);
-console.log("Kiểu dữ liệu:", typeof ketQua2);
+Convert number 1000 -> string
+let oriNum = 1000;
+let numStr = String(oriNum);
+console.log("\n--- Exercise 2 ---");
+console.log("Value:", numStr);
+console.log("Data Type:", typeof numStr);
 
-Chuyển đổi true (boolean) -> string
-let bai3 = true;
-let ketQua3 = String(bai3); // Dùng hàm String() để ép kiểu
-console.log("\n--- Bài 3 ---");
-console.log("Giá trị:", ketQua3);
-console.log("Kiểu dữ liệu:", typeof ketQua3);
+Convert boolean true -> string
+let isSuccess = true;
+let boolStr = String(isSuccess);
+console.log("\n--- Exercise 3 ---");
+console.log("Value:", boolStr);
+console.log("Data Type:", typeof boolStr);
 
 Phần 5 Dự đoán kết quả (true / false):
 Boolean(0) - false
