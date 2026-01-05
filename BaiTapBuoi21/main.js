@@ -16,14 +16,14 @@ This occurs because the subtraction operator (-) triggers implicit type coercion
 // Task 3
 let age = 9;
 let mathScore = 10;
-let isVip = false;
-let canEnter = (age >= 10 && mathScore > 7) || isVip;
+let isVIP = false;
+let canEnter = (age >= 10 && mathScore > 7) || isVIP;
 console.log(canEnter);
 
-let age = 9;
-let mathScore = 10;
-let isVip = true;
-let canEnter = (age >= 10 && mathScore > 7) || isVip;
+age = 9;
+athScore = 10;
+isVip = true;
+canEnter = (age >= 10 && mathScore > 7) || isVIP;
 console.log(canEnter);
 
 !(age < 10) is equivalent to age >= 10 because the ! symbol is the Logical NOT operator (negation).
