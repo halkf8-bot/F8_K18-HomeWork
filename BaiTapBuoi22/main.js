@@ -1,19 +1,18 @@
 // Lesson 1
 function classifyStudent(score) {
-    if (score < 0 || score >= 10) {
-        console.log("Invalid score! Please enter a number from 0 to 10.");
-        return;
+    if (score < 0 || score > 10) {
+        return "Invalid score! Please enter a number from 0 to 10.";
     }
     if (score >= 9) {
-        console.log("Excellent");
+        return "Excellent";
     } else if (score >= 8) {
-        console.log("Very Good");
+        return "Very Good";
     } else if (score >= 6.5) {
-        console.log("Good");
+        return "Good";
     } else if (score >= 5) {
-        console.log("Average");
+        return "Average";
     } else {
-        console.log("Weak");
+        return "Weak";
     }
 }
 console.log(classifyStudent(1));
@@ -28,37 +27,38 @@ function getDaysInMonth(month) {
         case 8:
         case 10:
         case 12:
-            console.log("Tháng " + month + " có 31 ngày");
-            break;
+            return "Month " + month + " has 31 days";
         case 4:
         case 6:
         case 9:
         case 11:
-            console.log("Tháng " + month + " có 30 ngày");
-            break;
+            return "Month " + month + " has 30 days";
         case 2:
-            console.log("Tháng 2 có 28 ngày");
-            break;
+            return "Month 2 has 28 or 29 days";
         default:
-            console.log("Lỗi: Vui lòng nhập tháng từ 1 đến 12");
+            return "Error: Please enter a month from 1 to 12";
     }
 }
 console.log(getDaysInMonth(1));
 
 // Lesson 3
-let n = 10;
-let result= (n % 2 === 0) ? "Even" : "Odd";
-console.log(result);
+function checkEvenOdd(n) {
+    return (n % 2 === 0) ? "Even" : "Odd";
+}
+console.log(checkEvenOdd(5));
 
 // Lesson 4
-let age = 10;
-let basePrice = 100000;
-let ticketPrice = (age < 13) ? basePrice * 0.5 : basePrice;
-console.log("Tuổi khách hàng: " + age);
-console.log("Giá vé phải trả: " + ticketPrice);
+function calculateTicketPrice(age, basePrice) {
+    let finalPrice = (age < 13) ? basePrice * 0.5 : basePrice;
+    return finalPrice;
+}
+let priceChild = calculateTicketPrice(10, 100000);
+console.log("Age 10 - Price: " + priceChild);
+let priceAdult = calculateTicketPrice(25, 100000);
+console.log("Age 25 - Price: " + priceAdult);
 
 // Lesson 5
-function convertToF(celsius) {
+function toFahrenheit(celsius) {
     return celsius * 1.8 + 32;
 }
 console.log("0 độ C = " + convertToF(0) + " độ F");     // Điểm đóng băng
