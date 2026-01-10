@@ -1,33 +1,36 @@
 // Task 1
-function classifyTriangle(a, b, c) {
-    // if a, b, c do not form a triangle
+function getTriangleType(a, b, c) {
+    if (typeof a !== 'number' || typeof b !== 'number' || typeof c !== 'number') {
+        return "Invalid";
+    }
     if (a + b <= c || a + c <= b || b + c <= a) {
-        return "three sides do not form a triangle.";
+        return "Not a triangle";
     }
-    // if three sides are equal
     if (a === b && b === c) {
-        return "equilateral triangle";
+        return "Equilateral";
     }
-    // if two sides are equal
     if (a === b || a === c || b === c) {
-        return "isosceles triangle";
+        return "Isosceles";
     }
-    // if it is a right triangle
     if (a * a === b * b + c * c || b * b === a * a + c * c || c * c === a * a + b * b) {
-        return "right triangle";
+        return "Right";
     }
-    // the remaining cases
-    return "ordinary triangle";
+    return "Scalene";
 }
-console.log(classifyTriangle(2, 2, 2));
+console.log(getTriangleType(2, 2, 2));
+console.log(getTriangleType("1", "2", "3"));
+console.log(getTriangleType(3, 4, 5));
 
 // Task 2
-function checkNumber (a) {
+function isPerfectNumber(a) {
     let result = a ** 0.5;
+    if (typeof a !== 'number' || a < 0) {
+        return false;
+    }
     if (result % 1 === 0) {
         return "square number";
     } else {
         return "not a square number";
     }
 }
-console.log(checkNumber(17));
+console.log(isPerfectNumber(17));
