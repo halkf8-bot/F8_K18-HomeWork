@@ -1,0 +1,27 @@
+.benefits{
+    margin-bottom: 10rem;
+}
+.bene-top{
+    margin-bottom: 8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.bene-top h2{
+    font-weight: 600;
+    font-size: 4.8rem;
+}
+.bene-content{
+    display: flex;
+    gap: 30rem;
+}
+.bene-content{
+    color: #59595A;
+}
+.bene-content a{
+    white-space: nowrap;
+    background: #FFFFFF;
+    padding: 1.8rem 2.4rem;
+    border: 0.1rem solid #F1F1F3;
+    border-radius: 0.8rem;
+}

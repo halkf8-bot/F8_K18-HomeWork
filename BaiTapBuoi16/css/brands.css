@@ -1,0 +1,22 @@
+.container:last-child{
+    padding: 0 16rem;
+}
+.brands{
+    margin-bottom: 10rem;
+    padding: 3rem;
+    background: #FCFCFD;
+    border-radius: 1.2rem;
+    border: 0.1rem solid #F1F1F3;
+    display: flex;
+    justify-content: space-between;
+}
+.brands img{
+    padding: 3rem 4rem;
+    border-right: 0.1rem solid #F1F1F3;
+}
+.brands img:last-child{
+    border-right: none;
+}
+.networking{
+    margin-bottom: 15rem;
+}
