@@ -1,22 +1,22 @@
 .benefits{
     margin-bottom: 10rem;
 }
-.bene-top, .course-top{
+.bene-top, .course-top, .testimo-top, .pricing-top{
     margin-bottom: 8rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
-.bene-top h2, .course-top h2{
+.bene-top h2, .course-top h2, .testimo-top h2, .pricing-top h2{
     font-weight: 600;
     font-size: 4.8rem;
 }
-.bene-content, .course-content{
+.bene-content, .course-content, .testimo-content, .pricing-content{
     display: flex;
     gap: 30rem;
     color: #59595A;
 }
-.bene-content a, .course-content a{
+.bene-content a, .course-content a, .testimo-content a{
     white-space: nowrap;
     background: #FFFFFF;
     padding: 1.8rem 2.4rem;

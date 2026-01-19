@@ -1,6 +1,6 @@
 .bene-bot{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 2rem;
 }
 .bene-item{
@@ -14,6 +14,7 @@
     padding: 5rem;
     border-radius: 1.2rem;
     background: #FFFFFF;
+    flex: 1;
 }
 .card p:first-child{
     font-size: 8rem;

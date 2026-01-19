@@ -1,0 +1,53 @@
+.testimo{
+    margin-bottom: 15rem;
+}
+.testimo-content{
+    color: #59595A;
+}
+.testimo-bot{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+.testimo-item{
+    display: flex;
+    gap: 3rem;
+}
+.testimo-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    background: #FFFFFF;
+    border: 0.1rem solid #F1F1F3;
+    border-radius: 1.2rem;
+    flex: 1;
+}
+.testimo-title p{
+    color: #4C4C4D;
+    padding: 5rem;
+}
+.testimo hr{
+    border: 0.1rem solid #F1F1F3;
+}
+.testimo-ava{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 5rem;
+}
+.ava-sub{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.ava-sub p{
+    font-weight: 600;
+}
+.testimo-ava a{
+    border: 0.1rem solid #F1F1F3;
+    border-radius: 0.8rem;
+    padding: 1.8rem 2.4rem;
+    background: #F7F7F8;
+    font-weight: 500;
+}
