@@ -34,7 +34,15 @@ function findBestSellingProduct(productList, orderList) {
     let revenueByProduct = {};
     for (const order of orderList) {
         for (const item of order.items) {
-            const product = productList.find(p => p.id === item.productId);
+
+            let product = null;
+            for (const p of productList) {
+                if (p.id === item.productId) {
+                    product = p;
+                    break;
+                }
+            }
+
             if (product) {
                 const currentRevenue = product.price * item.quantity;
                 if (revenueByProduct[item.productId]) {
@@ -56,13 +64,23 @@ function findBestSellingProduct(productList, orderList) {
         }
     }
 
-    const bestProduct = productList.find(p => p.id == bestProductId);
+    let bestProduct = null;
+    if (bestProductId) {
+        for (const p of productList) {
+            if (p.id == bestProductId) {
+                bestProduct = p;
+                break;
+            }
+        }
+    }
 
-    return {
-        name: bestProduct.name,
-        totalRevenue: maxRevenue
-    };
+    if (bestProduct) {
+        bestProduct.totalRevenue = maxRevenue;
+        return bestProduct;
+    } else {
+        return null;
+    }
 }
 
 const result = findBestSellingProduct(products, orders);
-console.log(result);
+console.log("Sản phẩm bán chạy nhất là:", result);
