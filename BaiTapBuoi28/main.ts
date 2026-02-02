@@ -65,11 +65,11 @@ function calculateTotalSalary(employees: EmployeeI[]): number {
 }
 // Test
 // Staff Full-time
-const boss = new FullTimeEmployee(1, "Nguyen Van A", 1000);
+const boss: EmployeeI = new FullTimeEmployee(1, "Nguyen Van A", 1000);
 // Staff Part-time
-const khiem = new PartTimeEmployee(2, "Tran Van B", 20, 50);
+const khiem: EmployeeI = new PartTimeEmployee(2, "Tran Van B", 20, 50);
 const staffList: EmployeeI[] = [boss, khiem];
-const totalS = calculateTotalSalary(staffList);
+const totalSalary = calculateTotalSalary(staffList);
 console.log(`Lương của ${boss.name}: ${boss.getSalary()}`);
 console.log(`Lương của ${khiem.name}: ${khiem.getSalary()}`);
-console.log(`Tổng lương công ty: ${totalS}`);
+console.log(`Tổng lương công ty: ${totalSalary}`);
