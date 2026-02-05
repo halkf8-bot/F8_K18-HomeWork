@@ -8,31 +8,31 @@ interface EmployeeI {
 }
 
 abstract class Employee implements EmployeeI {
-    protected _id: number;
-    protected _name: string;
-    protected _salary: number;
+    protected id: number;
+    protected name: string;
+    protected salary: number;
     constructor(id: number, name: string, salary: number) {
-        this._id = id;
-        this._name = name;
+        this.id = id;
+        this.name = name;
         this.setSalary(salary);
     }
     getId(): number {
-        return this._id;
+        return this.id;
     }
     getName(): string {
-        return this._name;
+        return this.name;
     }
     setName(name: string): void {
-        this._name = name;
+        this.name = name;
     }
     getSalary(): number {
-        return this._salary;
+        return this.salary;
     }
     setSalary(salary: number): void {
         if (salary <= 0) {
             throw new Error("Lỗi: Lương phải lớn hơn 0");
         }
-        this._salary = salary;
+        this.salary = salary;
     }
     abstract calculateSalary(): number;
 }
@@ -44,7 +44,7 @@ class Developer extends Employee {
         this.overtimeHours = overtimeHours;
     }
     calculateSalary(): number {
-        return this._salary + (this.overtimeHours * 50000);
+        return this.salary + (this.overtimeHours * 50000);
     }
 }
 class Manager extends Employee {
@@ -54,14 +54,13 @@ class Manager extends Employee {
         this.teamSize = teamSize;
     }
     calculateSalary(): number {
-        return this._salary + (this.teamSize * 200000);
+        return this.salary + (this.teamSize * 200000);
     }
 }
 
-
 // TEST
-const dev = new Developer(1, "Dev", 10000000, 10);
+const dev: Employee = new Developer(1, "Dev", 10000000, 10);
 console.log(`${dev.getName()} - Total salary: ${dev.calculateSalary()}`);
 
-const manager = new Manager(2, "Ma", 20000000, 5);
+const manager: Employee = new Manager(2, "Ma", 20000000, 5);
 console.log(`${manager.getName()} - Total salary: ${manager.calculateSalary()}`);
