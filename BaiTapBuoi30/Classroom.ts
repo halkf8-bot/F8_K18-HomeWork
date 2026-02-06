@@ -5,7 +5,7 @@ export class Classroom {
     constructor(name: string) {
         this.name = name
     }
-    addStudent (student: Student) {
+    addStudent(student: Student) {
         this.students.push(student)
     }
     notify(message: string) {
