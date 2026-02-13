@@ -1,5 +1,8 @@
-export class Student {
-    name: string
+export interface ObserverI {
+    receive(message: string): void
+}
+export class Student implements ObserverI {
+    private name: string
     constructor(name: string) {
         this.name = name
     }

@@ -1,9 +1,9 @@
-import {Student} from "./Student"
+import {ObserverI, Student} from "./Student"
 import {Classroom} from "./Classroom"
 
-const cJs = new Classroom("Js Cơ Bản")
-const ha = new Student("Hà")
-const khiem = new Student("Khiêm")
+const cJs: Classroom = new Classroom("Js Cơ Bản")
+const ha: ObserverI = new Student("Hà")
+const khiem: ObserverI = new Student("Khiêm")
 
 cJs.addStudent(ha)
 cJs.addStudent(khiem)
