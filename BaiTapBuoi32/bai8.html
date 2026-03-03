@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        li {
+            padding: 10px;
+            cursor: pointer;
+            margin-bottom: 5px;
+            border: 1px solid #ccc;
+            list-style: none;
+        }
+        .selected {
+            background-color: #1d4ed8;
+        }
+    </style>
+</head>
+<body>
+<ul id="menuList">
+    <li>Trang chủ</li>
+    <li>Sản phẩm</li>
+    <li>Giới thiệu</li>
+    <li>Liên hệ</li>
+</ul>
+<script>
+    // tìm tất cả thẻ li nằm trong danh sách #menuList
+    let listItems = document.querySelectorAll('#menuList li')
+    // dùng vòng lặp forEach() đi qua từng thẻ li
+    listItems.forEach(item => {
+        // li function click
+        item.addEventListener('click', () => {
+            // THU HỒI: Đi tìm thẻ nào đang được gắn class 'selected' trên toàn bộ trang web
+            let currentSelected = document.querySelector('.selected')
+            // kiểm tra xem có ai đang đội vương miện không
+            if (currentSelected !== null) {
+                // Nếu có, lột vương miện của người đó ra (xóa class 'selected')
+                currentSelected.classList.remove('selected')
+            }
+            // Trao: gắn class 'selected' (đổi nền xanh) cho thẻ <li> vừa bị click
+            item.classList.add('selected')
+        })
+    })
+</script>
+</body>
+</html>

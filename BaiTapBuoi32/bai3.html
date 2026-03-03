@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="textInput" placeholder="Nhập chữ vào đây...">
+<button id="addBtn">Add</button>
+<div id="contentArea"></div>
+<script>
+    // tìm ô nhập, nút, khu vực
+    const textInput = document.getElementById('textInput')
+    const addBtn = document.getElementById('addBtn')
+    const contentArea = document.getElementById('contentArea')
+    // nút function
+    addBtn.addEventListener('click', () => {
+        // lấy chữ từ ô ở trên
+        let userInput = textInput.value
+        // tạo thẻ p mới
+        let newParagraph = document.createElement('p')
+        // gắn chữ người dùng nhập vào thẻ p
+        newParagraph.textContent = userInput
+        // tiếp theo dán thẻ p và khu vực
+        contentArea.appendChild(newParagraph)
+        // xóa sạch ô nhập cho lần nhập tiếp theo
+        textInput.value = ''
+    })
+</script>
+</body>
+</html>

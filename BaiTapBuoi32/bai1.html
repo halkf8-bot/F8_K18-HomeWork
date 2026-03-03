@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="btn">Add paragraph</button>
+<div id="box"></div>
+<script>
+    // tìm cái nút
+    const button = document.getElementById('btn')
+    // tìm box
+    const theBox = document.getElementById('box')
+    // nút function
+    button.addEventListener('click', () => {
+        // click tạo ra đoạn văn
+        const newParagraph = document.createElement('p')
+        // sau đó viết chữ vào thẻ p
+        newParagraph.textContent = 'Hello DOM'
+        // dán lại thẻ p vào box
+        theBox.appendChild(newParagraph)
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="btnAdd">Add item</button>
+<ul id="itemList"></ul>
+<script>
+    // tạo biến nhớ số hiện tại bắt đầu từ 0
+    let itemCount = 0
+    // tìm nút và danh sách
+    const buttonAdd = document.getElementById('btnAdd')
+    const listElement = document.getElementById('itemList')
+    // nút function
+    buttonAdd.addEventListener('click', () => {
+        // mỗi khi click tăng biến đếm lên 1
+        itemCount++
+        // sau đó tạo thẻ li mới
+        const newItemLi = document.createElement('li')
+        // viết chữ vào thẻ li vào số hiện tại
+        newItemLi.textContent = `Item ${itemCount}`
+        // nhét lại thẻ li mới vào danh sách đầu ul
+        listElement.appendChild(newItemLi)
+    })
+</script>
+</body>
+</html>

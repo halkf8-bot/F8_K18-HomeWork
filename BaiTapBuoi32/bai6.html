@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .deleteBtn {
+            font-size: 20px;
+            color: white;
+            background-color: red;
+            border: none;
+            margin-left: 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<ul id="taskList">
+    <li>1
+        <button class="deleteBtn">&times</button>
+    </li>
+    <li>2
+        <button class="deleteBtn">&times</button>
+    </li>
+    <li>3
+        <button class="deleteBtn">&times</button>
+    </li>
+</ul>
+<script>
+    // tìm tất cả nút X trên trang web thông qua class 'deleteBtn'
+    let deleteBtns = document.querySelectorAll('.deleteBtn')
+    // dùng loop forEach để duyệt qua từng nút X ở trên
+    deleteBtns.forEach(btn => {
+        // nút function
+        btn.addEventListener('click', () => {
+            // tìm thẻ cha từ cái nút (btn) đang bị click, tìm ngược lên thẻ <li> đang chứa nó
+            let listItem = btn.parentElement
+            // cuối cùng gọi lệnh remove() để xóa thẻ <li> đó khỏi trang web
+            listItem.remove()
+        })
+    })
+</script>
+</body>
+</html>

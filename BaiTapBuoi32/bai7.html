@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .taskText {
+            cursor: pointer;
+            font-size: 500px;
+        }
+        .completed {
+            text-decoration: line-through;
+        }
+        .deleteBtn {
+            cursor: pointer;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+<input type="text" id="taskInput" placeholder="What needs to be done?">
+<button id="addBtn">Add Task</button>
+<ul id="taskList"></ul>
+<script>
+    // tìm ô nhập input, nút, danh sách
+    let taskInput = document.getElementById('taskInput')
+    let addBtn = document.getElementById('addBtn')
+    let taskList = document.getElementById('taskList')
+    // nút function
+    addBtn.addEventListener('click', () => {
+        // lấy dữ liệu khi nhập và loại bỏ khoảng trắng thừa
+        text = taskInput.value.trim()
+        if (text === '') {
+            alert('Nhập công việc lẹ lên')
+            return
+        }
+
+        // đầu tiên tạo thẻ cha li bọc bên ngoài
+        let li = document.createElement('li')
+
+        // tạo thẻ span chứa chữ
+        let span = document.createElement('span')
+        span.textContent = taskText
+        // gắn class có hình bàn tay click
+        span.className = 'taskText'
+        // span function: click vào chữ thì bật/tắt class gạch ngang
+        span.addEventListener('click', () => {
+            span.classList.toggle('completed')
+        })
+
+        // tiếp tục tạo nút delete
+        let delBtn = document.createElement('button')
+        // gắn chữ
+        delBtn.textContent = 'X'
+        // gắn class
+        delBtn.className = 'deleteBtn'
+        // del function: click vào nút Delete thì xóa luôn thẻ <li> chứa nó
+        delBtn.addEventListener('click', () => {
+            li.remove()
+        })
+
+        // Lắp ráp các phần: Nhét <span> (chữ) và <button> (nút xóa) vào trong <li>
+        li.appendChild(span)
+        li.appendChild(delBtn)
+
+        // Hiển thị lên: Gắn thẻ <li> hoàn chỉnh lên danh sách <ul>
+        taskList.appendChild(li)
+
+        // dọn dẹp ô nhập
+        taskInput.value = ''
+    })
+</script>
+</body>
+</html>

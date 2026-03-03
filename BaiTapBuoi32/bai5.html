@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .text-red {
+            color: red;
+        }
+        li {
+            cursor: pointer;
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+<ul id="colorList">
+    <li>A</li>
+    <li>B</li>
+    <li>C</li>
+</ul>
+<script>
+    // tìm tất thẻ li
+    const listItems = document.querySelectorAll('li')
+    // dùng loop forEach để đi qua các li
+    listItems.forEach(item => {
+        // nghe sự kiện từ biến item
+        item.addEventListener('click', () => {
+        // Bật/tắt class 'text-red'
+        // chưa có class 'text-red' -> nó sẽ thêm vào
+        // đã có class 'text-red' -> nó sẽ xóa đi
+        item.classList.toggle('text-red')
+        })
+    })
+</script>
+</body>
+</html>

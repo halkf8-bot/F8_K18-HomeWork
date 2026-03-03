@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="taskInput" placeholder="Nhập công việc cần làm nhé...">
+<button id="addBtn">Add</button>
+<ul id="taskList"></ul>
+<script>
+    // tìm input button ul
+    const taskInput = document.getElementById('taskInput')
+    const addBtn = document.getElementById('addBtn')
+    const taskList = document.getElementById('taskList')
+    // nút function
+    addBtn.addEventListener('click', () => {
+        // lấy dữ liệu khi nhập và loại bỏ khoảng trắng thừa
+        let taskText = taskInput.value.trim()
+        // KIỂM TRA ĐIỀU KIỆN: Nếu input rỗng thì không thêm
+        if (taskText === '') {
+            alert('Nhập công việc lẹ lên')
+            // cuối cùng return thoát khỏi hàm
+            return
+        }
+        // nếu có chữ tạo thẻ li mới
+        let newTaskLi = document.createElement('li')
+        // gán nội dung việc vào li
+        newTaskLi.textContent = taskText
+        // thêm lại thẻ li vào ul ở trên
+        taskList.appendChild(newTaskLi)
+        // cuối cùng dọn dẹp cho lần nhập tiếp theo
+        taskInput.value = ""
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .control-panel {
+            background: #8e23c3;
+            color: #ffffff;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        li {
+            margin-bottom: 10px;
+            list-style: none;
+            padding: 5px;
+            border-bottom: 1px dashed #ccc;
+        }
+        .task-text {
+            margin-right: 15px;
+            display: inline-block;
+        }
+        .btn-done {
+            background-color: gold;
+            color: black;
+            cursor: pointer;
+        }
+        .btn-done-active {
+            background-color: lightgreen;
+        }
+        .btn-delete {
+            background-color: red;
+            color: white;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="control-panel">
+        <h2>Search & Filter</h2>
+        <input type="text" id="searchInput" placeholder="Search task name...">
+        <label>
+            <input type="checkbox" id="filterDone"> DONE
+        </label>
+    </div>
+    <div class="control-panel">
+        <h2>New Task</h2>
+        <input type="text" id="taskInput" placeholder="Enter new task...">
+        <button id="addBtn">Add</button>
+    </div>
+    <div class="control-panel">
+        <h2>Task List</h2>
+        <ul id="taskList"></ul>
+    </div>
+
+    <script>
+        let searchInput = document.getElementById('searchInput')
+        let filterDone = document.getElementById('filterDone')
+        let taskInput = document.getElementById('taskInput')
+        let addBtn = document.getElementById('addBtn')
+        let taskList = document.getElementById('taskList')
+
+        // B2: func TÌM KIẾM VÀ LỌC
+        // Hàm này sẽ tự động giấu hoặc hiện các <li> dựa trên ô search và checkbox
+        function filterTasks() {
+            // Lấy chữ người dùng đang gõ chuyển thành chữ thường để so sánh cho chuẩn
+            let searchText = searchInput.value.toLowerCase()
+            // Xem checkbox có đang được tích hay không
+            let doneChecked = filterDone.checked
+
+            // Lấy toàn bộ thẻ <li> đang có trong danh sách
+            let allItems = taskList.querySelectorAll('li')
+
+            // Đi kiểm tra từng thẻ <li> một
+            allItems.forEach(li => {
+                // Lấy tên công việc của <li> hiện tại
+                let taskName = li.querySelector('.task-text').textContent.toLowerCase()
+                // Kiểm tra xem <li> này có chứa class completed không (dấu hiệu đã làm xong)
+                let isDone = li.classList.contains('completed')
+
+                // ĐIỀU KIỆN 1: Tên công việc có chứa chữ trong ô Search không?
+                // Hàm includes() trả về true nếu taskName có chứa searchText
+                let matchSearch = taskName.includes(searchText)
+
+                // ĐIỀU KIỆN 2: Thỏa mãn Checkbox không?
+                // Nếu người dùng KHÔNG tích checkbox (!DoneChecked) -> luôn hiện (true)
+                // Nếu người dùng CÓ tích checkbox -> chỉ hiện khi công việc đã xong (Done)
+                let matchFilter = !DoneChecked || Done;
+
+                // thỏa mãn 2 ĐIỀU KIỆN thì hiện, nếu không thì giấu đi
+                if (matchSearch && matchFilter) {
+                    li.style.display = ''; // Hiện lại bình thường
+                } else {
+                    li.style.display = 'none'; // Giấu đi
+                }
+            })
+        }
+
+        // B3: NÚT ADD
+        addBtn.addEventListener('click', () => {
+            let text = taskInput.value.trim()
+            if (text === "") return
+
+            // Tạo các thẻ HTML
+            let li = document.createElement('li')
+            let span = document.createElement('span')
+            span.textContent = text
+            span.className = 'task-text'
+
+            // Tạo nút Done
+            let doneBtn = document.createElement('button')
+            doneBtn.textContent = 'Done'
+            doneBtn.className = 'btn-done'
+
+            // Xử lý khi click nút Done
+            doneBtn.addEventListener('click', () => {
+                // Đổi màu nút (thêm/bớt class xanh)
+                doneBtn.classList.toggle('btn-done-active')
+
+                // Đánh dấu (hoặc bỏ đánh dấu) cho thẻ <li> là đã hoàn thành
+                // Class completed dùng làm dấu hiệu cho hàm Lọc filterTasks
+                li.classList.toggle('completed')
+
+                // Gọi lại hàm lọc để lỡ người dùng đang tích Checkbox thì nó tự giấu đi ngay
+                filterTasks()
+            })
+
+            // Tạo nút Delete
+            let delBtn = document.createElement('button')
+            delBtn.textContent = 'Delete'
+            delBtn.className = 'btn-delete'
+
+            // Xử lý khi click nút Delete
+            delBtn.addEventListener('click', () => {
+                li.remove()
+            })
+
+            // Lắp ráp và hiển thị
+            li.appendChild(span)
+            li.appendChild(doneBtn)
+            li.appendChild(delBtn)
+            taskList.appendChild(li)
+
+            // Dọn dẹp ô nhập
+            taskInput.value = ""
+
+            // Cập nhật lại bộ lọc mỗi khi có công việc mới thêm vào
+            filterTasks()
+        })
+
+        // B4: KÍCH HOẠT TÌM KIẾM/LỌC KHI CÓ THAO TÁC
+        // Sự kiện input chạy liên tục mỗi khi gõ vào ô search
+        searchInput.addEventListener('input', filterTasks)
+
+        // Sự kiện change chạy khi người dùng tích hoặc bỏ tích checkbox
+        filterDone.addEventListener('change', filterTasks)
+    </script>
+</body>
+</html>
