@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        .taskText {
+        .text {
             cursor: pointer;
             font-size: 500px;
         }
@@ -40,9 +40,9 @@
 
         // tạo thẻ span chứa chữ
         let span = document.createElement('span')
-        span.textContent = taskText
+        span.textContent = text
         // gắn class có hình bàn tay click
-        span.className = 'taskText'
+        span.className = 'text'
         // span function: click vào chữ thì bật/tắt class gạch ngang
         span.addEventListener('click', () => {
             span.classList.toggle('completed')

@@ -87,7 +87,7 @@
                 // ĐIỀU KIỆN 2: Thỏa mãn Checkbox không?
                 // Nếu người dùng KHÔNG tích checkbox (!DoneChecked) -> luôn hiện (true)
                 // Nếu người dùng CÓ tích checkbox -> chỉ hiện khi công việc đã xong (Done)
-                let matchFilter = !DoneChecked || Done;
+                let matchFilter = !doneChecked || isDone;
 
                 // thỏa mãn 2 ĐIỀU KIỆN thì hiện, nếu không thì giấu đi
                 if (matchSearch && matchFilter) {
@@ -145,16 +145,14 @@
 
             // Dọn dẹp ô nhập
             taskInput.value = ""
+            taskInput.focus()
 
             // Cập nhật lại bộ lọc mỗi khi có công việc mới thêm vào
             filterTasks()
         })
 
-        // B4: KÍCH HOẠT TÌM KIẾM/LỌC KHI CÓ THAO TÁC
-        // Sự kiện input chạy liên tục mỗi khi gõ vào ô search
+        // B4: Cảm biến tự động
         searchInput.addEventListener('input', filterTasks)
-
-        // Sự kiện change chạy khi người dùng tích hoặc bỏ tích checkbox
         filterDone.addEventListener('change', filterTasks)
     </script>
 </body>
