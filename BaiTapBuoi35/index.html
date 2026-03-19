@@ -930,56 +930,45 @@
 
     // 2. Lắng nghe sự kiện 'input' (Xảy ra NGAY LẬP TỨC mỗi khi bạn gõ 1 phím hoặc xóa 1 phím)
     oMatKhau.addEventListener('input', function(event) {
-
         const giaTri = event.target.value; // Lấy chữ mà người dùng đang gõ
         let diem = 0; // Ban đầu chưa có gì, điểm = 0
-
         // Nếu người dùng xóa trắng ô mật khẩu thì điểm về 0 luôn
         if (giaTri.length === 0) {
             diem = 0;
         } else {
             // --- Bắt đầu bài kiểm tra cộng điểm ---
-
             // Tiêu chí 1: Độ dài từ 8 ký tự trở lên (+1 điểm)
             if (giaTri.length >= 8) {
                 diem = diem + 1;
             }
-
             // Cắt mật khẩu thành một mảng các ký tự rời rạc để dễ kiểm tra
             const mangKyTu = giaTri.split('');
-
             // Tiêu chí 2: Có ít nhất 1 chữ in hoa từ A đến Z (+1 điểm)
             const coChuHoa = mangKyTu.some(char => char >= 'A' && char <= 'Z');
             if (coChuHoa === true) {
                 diem = diem + 1;
             }
-
             // Tiêu chí 3: Có ít nhất 1 chữ số từ 0 đến 9 (+1 điểm)
             const coChuSo = mangKyTu.some(char => char >= '0' && char <= '9');
             if (coChuSo === true) {
                 diem = diem + 1;
             }
-
             // Tiêu chí 4: Có ký tự đặc biệt (Không phải chữ thường, chữ hoa hay số) (+1 điểm)
             const coKyTuDacBiet = mangKyTu.some(char => {
                 const laChuThuong = char >= 'a' && char <= 'z';
                 const laChuHoa = char >= 'A' && char <= 'Z';
                 const laSo = char >= '0' && char <= '9';
-
                 // Nếu không phải chữ thường, VÀ không phải chữ hoa, VÀ không phải số -> Nó là ký tự đặc biệt
                 return !laChuThuong && !laChuHoa && !laSo;
             });
-
             if (coKyTuDacBiet === true) {
                 diem = diem + 1;
             }
         }
 
         // --- Cập nhật giao diện dựa vào số điểm ---
-
         // Gắn điểm vào thuộc tính data-level. (CSS đã được viết sẵn để đổi màu dựa trên số này)
         thanhDoManh.setAttribute('data-level', diem);
-
         // Đổi dòng chữ hiển thị tương ứng
         if (diem === 0) nhanDoManh.textContent = 'Độ mạnh mật khẩu';
         if (diem === 1) nhanDoManh.textContent = 'Yếu';
@@ -996,7 +985,6 @@
 
     // 2. Gắn sự kiện 'click' cho nút Quay lại
     nutQuayLai.addEventListener('click', function() {
-
         // BƯỚC 1: Xóa sạch chữ người dùng đã nhập
         // Trình duyệt có sẵn một hàm rất tiện lợi tên là .reset() dùng riêng cho thẻ <form>
         formDangKy.reset();
@@ -1013,12 +1001,10 @@
             'confirmPassword',
             'terms'
         ];
-
         // Dùng vòng lặp for để lướt qua từng ô và gọi hàm dọn dẹp
         for (let i = 0; i < danhSachCacO.length; i++) {
             let fieldId = danhSachCacO[i];             // Tên ID của ô nhập
             let errorMsgId = fieldId + 'Error';        // Tên ID của thẻ báo lỗi
-
             // Gọi hàm clearFieldStatus ở bài 2
             clearFieldStatus(fieldId, errorMsgId);
         }
@@ -1026,17 +1012,14 @@
         // BƯỚC 3: Trả thanh độ mạnh mật khẩu về trạng thái ban đầu (mức 0)
         const thanhDoManh = document.getElementById('strengthBars');
         const nhanDoManh = document.getElementById('strengthLabel');
-
         thanhDoManh.setAttribute('data-level', '0');
         nhanDoManh.textContent = 'Độ mạnh mật khẩu';
 
         // BƯỚC 4: Chuyển đổi màn hình
         // Giấu màn hình chúc mừng đi
         manHinhThanhCong.classList.remove('show');
-
         // Hiện lại form đăng ký
         formDangKy.style.display = 'block';
-
     });
 </script>
 </body>
