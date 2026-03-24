@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="text" id="nameInput" placeholder="Nhập tên của bạn vào đây">
+    <button onclick="saveName()">Lưu</button>
+    <button onclick="readName()">Đọc</button>
+
+    <p>Tên của bạn là: <strong id="displayName">Chưa có thông tin</strong></p>
+    <script>
+        function saveName() {
+            let inputVal = document.getElementById("nameInput").value;
+            localStorage.setItem("userName", inputVal);
+            alert("Đã lưu tên thành công!");
+        }
+
+        function readName() {
+            let savedName = localStorage.getItem("userName");
+            if (savedName) {
+                document.getElementById("displayName").innerText = savedName;
+            } else {
+                alert("Chưa có tên nào được lưu.");
+            }
+        }
+
+        // Tự động chạy khi trang vừa tải xong để giữ lại tên
+        window.onload = function() {
+            let savedName = localStorage.getItem("userName");
+            if (savedName) {
+                document.getElementById("displayName").innerText = savedName;
+            }
+        };
+    </script>
+</body>
+</html>

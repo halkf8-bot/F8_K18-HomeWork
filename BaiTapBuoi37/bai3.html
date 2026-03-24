@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>Danh sách sản phẩm</h2>
+    <div class="product">
+        <p>Điện thoại iPhone</p>
+        <button onclick="addToCart('Điện thoại iPhone')">Thêm vào giỏ</button>
+    </div>
+    <div class="product">
+        <p>Laptop Dell</p>
+        <button onclick="addToCart('Laptop Dell')">Thêm vào giỏ</button>
+    </div>
+
+    <h2>Giỏ hàng của bạn</h2>
+    <div class="cart-box">
+        <p>Số lượng sản phẩm trong giỏ: <strong id="totalItems">0</strong></p>
+        <ul id="cartList"></ul>
+        <button onclick="clearCart()">Xóa giỏ hàng</button>
+    </div>
+    <script>
+        function getCart() {
+            let cartData = sessionStorage.getItem("shoppingCart");
+            if (cartData) {
+                return JSON.parse(cartData);
+            } else {
+                return [];
+            }
+        }
+
+        function renderCart() {
+            let cart = getCart();
+            let cartListElement = document.getElementById("cartList");
+
+            document.getElementById("totalItems").innerText = cart.length;
+
+            cartListElement.innerHTML = "";
+
+            for (let i = 0; i < cart.length; i++) {
+                let li = document.createElement("li");
+                li.innerText = cart[i];
+                cartListElement.appendChild(li);
+            }
+        }
+
+        function addToCart(productName) {
+            let cart = getCart();
+            cart.push(productName);
+            sessionStorage.setItem("shoppingCart", JSON.stringify(cart));
+            renderCart();
+        }
+
+        function clearCart() {
+            sessionStorage.removeItem("shoppingCart");
+            renderCart();
+        }
+
+        window.onload = renderCart;
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1 id="visitCountText">Bạn đã truy cập trang này 0 lần.</h1>
+    <button onclick="resetCounter()">Reset</button>
+    <script>
+        let currentVisits = Number(localStorage.getItem("pageVisits"));
+        currentVisits++;
+
+        localStorage.setItem("pageVisits", currentVisits);
+
+        document.getElementById("visitCountText").innerText = "Bạn đã truy cập trang này " + currentVisits + " lần.";
+
+        function resetCounter() {
+            localStorage.setItem("pageVisits", 0);
+            document.getElementById("visitCountText").innerText = "Bạn đã truy cập trang này 0 lần.";
+        }
+    </script>
+</body>
+</html>
